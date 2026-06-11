@@ -1,0 +1,19 @@
+README.md
+  s_f6e1d9efa72b05::t_71ea6bae204a86 1-19
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "5ece643bcb8f151d98ee9071306b595a3b9a5d14",
+  "prompts": {},
+  "sessions": {
+    "s_f6e1d9efa72b05": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a655cf33-0851-42a9-84fc-4e5aef428fd0",
+        "model": "claude-opus-4-7"
+      },
+      "human_author": "Ryo Takahashi <38057616+HighBridgeDragon@users.noreply.github.com>"
+    }
+  }
+}

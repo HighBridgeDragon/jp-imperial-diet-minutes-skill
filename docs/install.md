@@ -32,7 +32,7 @@ zip を導入しても、以下を満たさない環境では動作しません�
 
 - **プラン**: Free / Pro / Max / Team / Enterprise のいずれかであること。
 - **コード実行**: 有効になっていること。本スキルは `curl` 等の HTTP 呼び出しをコード実行で行います。
-- **ネットワークアクセス**: サンドボックスから `teikokugikai-i.ndl.go.jp` へ到達できること。claude.ai のネットワーク設定でブロックされる場合は、許可ドメインに `teikokugikai-i.ndl.go.jp` を追加する必要があります。**claude.ai からの到達性は未検証**のため、動作するとは断言できません。満たせない環境では Claude Code 経由をご利用ください。
+- **ネットワークアクセス**: サンドボックスから `teikokugikai-i.ndl.go.jp` へ到達できること。claude.ai のネットワーク設定でブロックされる場合は、許可ドメインに `teikokugikai-i.ndl.go.jp` を追加する必要があります。満たせない環境では Claude Code 経由をご利用ください。
 - **Claude API 経由**: API の Skills サンドボックスはネットワークアクセスを持たないため、原理的に帝国議会会議録 API を呼び出せません。
 
 ### OpenAI Codex

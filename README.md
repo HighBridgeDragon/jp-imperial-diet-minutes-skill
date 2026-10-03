@@ -20,7 +20,7 @@ npx skills add HighBridgeDragon/jp-imperial-diet-minutes-skill
 
 [Releases](https://github.com/HighBridgeDragon/jp-imperial-diet-minutes-skill/releases) から `jp-imperial-diet-minutes.zip` をダウンロードして導入します。
 
-- **claude.ai / Claude Desktop**: Settings > Capabilities からアップロード（要 Pro 以上のプランおよびコード実行の有効化。`teikokugikai-i.ndl.go.jp` への到達性は未検証で、ブロックされる場合は許可ドメインへの追加が必要）
+- **claude.ai / Claude Desktop**: Customize > Skills からアップロード（コード実行の有効化が必要。`teikokugikai-i.ndl.go.jp` への到達性は未検証で、ブロックされる場合は許可ドメインへの追加が必要）
 - **OpenAI Codex**: `~/.agents/skills/` 直下に展開後の `jp-imperial-diet-minutes` フォルダを配置
 
 各クライアント別の詳細な導入手順や動作条件（ネットワーク設定・フェッチ環境等）は [docs/install.md](docs/install.md) を参照してください。なお、Web 版 Gemini（gemini.google.com）と Claude API の Skills はシェル実行やネットワークアクセスを持たないため非対応です。

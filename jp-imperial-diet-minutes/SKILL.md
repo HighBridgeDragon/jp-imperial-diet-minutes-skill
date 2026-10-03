@@ -1,6 +1,6 @@
 ---
 name: jp-imperial-diet-minutes
-description: Search and retrieve Japanese Imperial Diet (帝国議会) meeting minutes, House of Peers (貴族院) and House of Representatives (衆議院), 1890-1947, via the official NDL Imperial Diet API (no auth required). Use for questions about Meiji, Taisho and prewar Showa parliament, historical legislators, and deliberations under the Meiji Constitution (大日本帝国憲法). Supports speech search, speaker lookup, meeting-level retrieval, and date/session/issue filtering. Not for the post-war National Diet (国会・参議院, from 1947-05) - use jp-diet-minutes. NDL 帝国議会会議録検索システム API 経由で第 1〜92 回帝国議会（貴族院・衆議院）の会議録を検索・取得するスキル。
+description: Search and retrieve Japanese Imperial Diet (帝国議会) meeting minutes, House of Peers (貴族院) and House of Representatives (衆議院), 1890-1947, via the official NDL Imperial Diet API (no auth required). Use for questions about Meiji, Taisho and prewar Showa parliament, historical legislators, and deliberations under the Meiji Constitution (大日本帝国憲法). Supports speech search, speaker lookup, meeting-level retrieval, and date/session/issue filtering. Not for the post-war National Diet (国会・参議院, from 1947-05), which is served by the separate NDL Kokkai API. NDL 帝国議会会議録検索システム API 経由で第 1〜92 回帝国議会（貴族院・衆議院）の会議録を検索・取得するスキル。
 license: MIT
 metadata:
   version: "0.1.0"
@@ -13,9 +13,9 @@ NDL（国立国会図書館）の帝国議会会議録検索システム API 経
 ## 対象範囲
 
 - 対象: 第 1〜92 回帝国議会（1890-11〜1947-03-31）。最後の会期は第 92 回。
-- 対象外: 日本国憲法施行（1947-05-03）後の国会（参議院を含む）。姉妹スキル [jp-diet-minutes-skill](https://github.com/HighBridgeDragon/jp-diet-minutes-skill)（`jp-diet-minutes`）を使う。
-- 「第 N 回国会」（戦後の回次も 1 から始まる）は姉妹スキルの回次であり、本 API の回次は帝国議会の第 1〜92 回に限る。
-- 境界は年ではなく回次と日付で判断する。1947 年の発言でも、3 月までは本 API、5 月以降は姉妹スキルの対象になる。
+- 対象外: 日本国憲法施行（1947-05-03）後の国会（参議院を含む）。戦後の国会は別 API（NDL 国会会議録検索システム API、`https://kokkai.ndl.go.jp/api/`）が扱う。
+- 「第 N 回国会」（戦後の回次も 1 から始まる）は戦後国会の回次であり、本 API の回次は帝国議会の第 1〜92 回に限る。
+- 境界は年ではなく回次と日付で判断する。1947 年の発言でも、3 月までは本 API、5 月以降は国会会議録 API の対象になる。
 
 ## 基本ルール
 
@@ -27,7 +27,7 @@ NDL（国立国会図書館）の帝国議会会議録検索システム API 経
 - レート: 並列呼び出し禁止。連続呼び出しは 3 秒以上空ける
 - `maximumRecords`: `speech` / `meeting_list` は 1〜100（既定 30）、`meeting` は 1〜10（既定 3）。超えると HTTP 400
 - 検索条件が必須。次の 16 パラメータのうち 1 つ以上を指定しないと HTTP 400（19007）になる: `nameOfHouse` `nameOfMeeting` `any` `speaker` `from` `until` `speechNumber` `speakerPosition` `speakerGroup` `speakerElection` `speechID` `issueID` `sessionFrom` `sessionTo` `issueFrom` `issueTo`。`searchRange` などの補助パラメータは数えない。各パラメータの仕様は [parameters.md](references/parameters.md)
-- `WebFetch` 等の要約モデルを介するツールは、応答に無いフィールドを混入させる事象が姉妹で観測されたため、生データ取得に使わない
+- `WebFetch` 等の要約モデルを介するツールは、応答に無いフィールド（`summary` 等）を混入させる事象が観測されているため、生データ取得に使わない
 
 ## URL の組み立て（必須ルール）
 

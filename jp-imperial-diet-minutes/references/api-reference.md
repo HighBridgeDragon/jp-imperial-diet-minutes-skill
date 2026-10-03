@@ -6,7 +6,7 @@ description: 帝国議会会議録検索システム API の3エンドポイン�
 # 帝国議会会議録検索システム API リファレンス
 
 帝国議会会議録検索システム（NDL 提供）が公開する、第 1〜92 回帝国議会（1890-11〜1947-03-31）の会議録 API の仕様。
-日本国憲法施行後の国会会議録 API は対象外（姉妹スキル `jp-diet-minutes` が扱う別 API）。
+日本国憲法施行後の国会会議録 API は対象外（別 API の NDL 国会会議録検索システム API、`https://kokkai.ndl.go.jp/api/` が扱う）。
 
 - Base URL: `https://teikokugikai-i.ndl.go.jp/api/emp/`
 - 公式仕様: <https://teikokugikai-i.ndl.go.jp/teikoku_api.html>

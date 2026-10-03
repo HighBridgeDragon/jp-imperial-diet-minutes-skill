@@ -1,0 +1,21 @@
+jp-imperial-diet-minutes/references/api-reference.md
+  s_77da3a99e279fa::t_37504e1f1896bd 1-21,27-34,36-68,70-80,82-137,139-172,174-186
+  s_77da3a99e279fa::t_fbcfe1d566edce 23,35,69,81,138,173
+  s_77da3a99e279fa::t_6eff12171eba93 22,24-26
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "ffa0fc0ac5a2244d48ecf50902ba550b79fbd749",
+  "prompts": {},
+  "sessions": {
+    "s_77da3a99e279fa": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "24256f45-b1b1-4937-b989-472f56570d69",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": null
+    }
+  }
+}

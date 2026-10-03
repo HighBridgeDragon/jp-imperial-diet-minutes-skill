@@ -25,7 +25,7 @@ description: 帝国議会会議録検索システム API のレスポンス構�
 
 ## 注意: フェッチツール選定
 
-`WebFetch` 等の内部要約モデルを介するツールは、レスポンスに存在しないフィールドが混入する事象が姉妹スキルで観測されている。生データ取得には `curl`（PowerShell では `curl.exe`。5.1 の `curl` は `Invoke-WebRequest` の別名）か `Invoke-RestMethod` を使う。
+`WebFetch` 等の内部要約モデルを介するツールは、レスポンスに存在しないフィールド（`summary` / `sampleSpeeches` / `notableSpeechCharacteristics` 等）が混入する事象が、同じ NDL の国会会議録 API で観測されている。生データ取得には `curl`（PowerShell では `curl.exe`。5.1 の `curl` は `Invoke-WebRequest` の別名）か `Invoke-RestMethod` を使う。
 
 txt ページ（`https://teikokugikai-i.ndl.go.jp/txt/<issueID>/<speechOrder>`）は引用リンクとしてユーザーに提示するためのもの。本文の取得は必ず API 経由で行う。
 
@@ -257,7 +257,7 @@ Windows の Git Bash で `curl -G --data-urlencode "speaker=尾崎行雄"` と�
 
 ### 2. 無効な院名はエラーにならず全件ヒットする
 
-`nameOfHouse=参議院` は条件から外れるだけで 200 を返す。他に条件が無いと全 1,748,061 件が対象になり、既定 30 件でも 659 KB になる。姉妹スキルの「参議院」を流用すると起きる。
+`nameOfHouse=参議院` は条件から外れるだけで 200 を返す。他に条件が無いと全 1,748,061 件が対象になり、既定 30 件でも 659 KB になる。戦後国会の院名「参議院」を指定すると起きる。
 対処: 院名は `貴族院` / `衆議院` / `両院` / `両院協議会` の 4 値に限る。参議院は本 API の対象外。
 
 ### 3. 必須条件の不足は HTTP 400

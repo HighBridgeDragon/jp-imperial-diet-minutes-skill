@@ -1,0 +1,20 @@
+jp-imperial-diet-minutes/SKILL.md
+  s_77da3a99e279fa::t_464dceeced60ac 51
+  s_77da3a99e279fa::t_7d2065a9016d05 30
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "bc19ac030290c983b258441db8f35ebdabb4deff",
+  "prompts": {},
+  "sessions": {
+    "s_77da3a99e279fa": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "24256f45-b1b1-4937-b989-472f56570d69",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ryo Takahashi <38057616+HighBridgeDragon@users.noreply.github.com>"
+    }
+  }
+}

@@ -21,7 +21,7 @@ npx skills add HighBridgeDragon/jp-imperial-diet-minutes-skill
 ## 主な動作条件
 
 - **生の HTTP 呼び出し**: 本スキルに同梱スクリプトは無く、`curl` や PowerShell の `Invoke-RestMethod` などで API を直接呼び出します。`WebFetch` のように要約モデルを介するツールは、応答に無い内容が混入するため使えません。
-- **ネットワークアクセス**: 実行環境から `teikokugikai-i.ndl.go.jp` へ到達できる必要があります。claude.ai での到達性は未検証です。通信がブロックされる場合は、許可ドメインへ `teikokugikai-i.ndl.go.jp` を追加する必要があります。
+- **ネットワークアクセス**: 実行環境から `teikokugikai-i.ndl.go.jp` へ到達できる必要があります。通信がブロックされる場合は、許可ドメインへ `teikokugikai-i.ndl.go.jp` を追加する必要があります。
 - **claude.ai / Claude Desktop 利用時の要件**: コード実行の有効化が必要です（Free / Pro / Max / Team / Enterprise の各プランで利用できます）。
 - **Web 版 Gemini / Claude API**: シェル実行サンドボックスやネットワークアクセスを持たないため、原理的に動作しません（CLI やデスクトップ版をご利用ください）。
 

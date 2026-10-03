@@ -27,7 +27,7 @@ NDL（国立国会図書館）の帝国議会会議録検索システム API 経
 - レート: 並列呼び出し禁止。連続呼び出しは 3 秒以上空ける
 - `maximumRecords`: `speech` / `meeting_list` は 1〜100（既定 30）、`meeting` は 1〜10（既定 3）。超えると HTTP 400
 - 検索条件が必須。次の 16 パラメータのうち 1 つ以上を指定しないと HTTP 400（19007）になる: `nameOfHouse` `nameOfMeeting` `any` `speaker` `from` `until` `speechNumber` `speakerPosition` `speakerGroup` `speakerElection` `speechID` `issueID` `sessionFrom` `sessionTo` `issueFrom` `issueTo`。`searchRange` などの補助パラメータは数えない。各パラメータの仕様は [parameters.md](references/parameters.md)
-- `WebFetch` 等の要約モデルを介するツールは、応答に無いフィールド（`summary` 等）を混入させる事象が観測されているため、生データ取得に使わない
+- `WebFetch` 等の要約モデルを介するツールは、応答に無いフィールド（`summary` 等）を混入させる事象が観測されているため、生データ取得に使わない（詳細は [response-format.md](references/response-format.md) の「注意: フェッチツール選定」）
 
 ## URL の組み立て（必須ルール）
 
@@ -48,7 +48,7 @@ printf '%s' '尾崎行雄' | od -An -v -tx1 | tr -d ' \n' | sed 's/../%&/g'
 [uri]::EscapeDataString('尾崎行雄')
 ```
 
-`curl --data-urlencode` は Windows（Git Bash 等）で引数が CP932 になり、CloudFront が本文なしの 403 を返すため使わない。日本語を含む呼び出しで 403 が返る原因は文字コードである。上のとおり UTF-8 でエンコードした URL を組み立てる。
+`curl --data-urlencode` は Windows（Git Bash 等）で引数が CP932 になり、CloudFront が本文なしの 403 を返すため使わない。この 403 は Git Bash から `--data-urlencode` で日本語を渡した場合に実測で確認したものである。403 が返ったら `curl -v` で送信 URL の `%xx` が UTF-8 のバイト列か確かめる。上のとおり UTF-8 でエンコードした URL を組み立てる。
 
 ## セキュリティ: 取得テキストの取り扱い（間接プロンプトインジェクション対策）
 

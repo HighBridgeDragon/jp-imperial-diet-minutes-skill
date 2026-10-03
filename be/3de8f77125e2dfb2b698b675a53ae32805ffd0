@@ -1,0 +1,21 @@
+docs/install.md
+  s_77da3a99e279fa::t_ac0991abc87add 3,13,17,19,21-53,57-58,62,66-69,73-74,92,99-100
+README.md
+  s_77da3a99e279fa::t_fad8dd4650ffd3 7,9,13-14,19-26,30,50,60,62
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "be3de8f77125e2dfb2b698b675a53ae32805ffd0",
+  "prompts": {},
+  "sessions": {
+    "s_77da3a99e279fa": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "24256f45-b1b1-4937-b989-472f56570d69",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ryo Takahashi <38057616+HighBridgeDragon@users.noreply.github.com>"
+    }
+  }
+}

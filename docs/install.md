@@ -19,18 +19,18 @@ npx skills add HighBridgeDragon/jp-imperial-diet-minutes-skill
 ### claude.ai / Claude Desktop
 
 1. [Releases](https://github.com/HighBridgeDragon/jp-imperial-diet-minutes-skill/releases) から `jp-imperial-diet-minutes.zip` をダウンロードします。
-2. Settings > Capabilities を開き、`jp-imperial-diet-minutes.zip` をアップロードします。
+2. Customize > Skills を開き、「+」→「+ Create skill」→「Upload a skill」の順に選んで `jp-imperial-diet-minutes.zip` をアップロードします。
 
 > [!IMPORTANT]
 > アップロードできるのは **Releases に添付された `jp-imperial-diet-minutes.zip`** だけです。GitHub リポジトリ画面の **Code > Download ZIP** や Releases の **Source code (zip)** で取得した zip は、展開時のルートが `jp-imperial-diet-minutes-skill-<ref>/`（直下に `jp-imperial-diet-minutes/`）になり `SKILL.md` が直下に来ないため、skill として認識されません。
 
-Custom Skill は面をまたいで同期しません。Claude Code に導入済みでも、claude.ai では別途アップロードが必要です。
+Custom Skill は claude.ai・Claude API・Claude Code の間で同期しません。Claude Code に導入済みでも、claude.ai では別途アップロードが必要です。
 
 #### 動作条件（claude.ai / Claude Desktop）
 
 zip を導入しても、以下を満たさない環境では動作しません。
 
-- **プラン**: Pro / Max / Team / Enterprise のいずれかであること。
+- **プラン**: Free / Pro / Max / Team / Enterprise のいずれかであること。
 - **コード実行**: 有効になっていること。本スキルは `curl` 等の HTTP 呼び出しをコード実行で行います。
 - **ネットワークアクセス**: サンドボックスから `teikokugikai-i.ndl.go.jp` へ到達できること。claude.ai のネットワーク設定でブロックされる場合は、許可ドメインに `teikokugikai-i.ndl.go.jp` を追加する必要があります。**claude.ai からの到達性は未検証**のため、動作するとは断言できません。満たせない環境では Claude Code 経由をご利用ください。
 - **Claude API 経由**: API の Skills サンドボックスはネットワークアクセスを持たないため、原理的に帝国議会会議録 API を呼び出せません。
@@ -96,6 +96,7 @@ HTTPS GET で生の JSON を取得できる手段が 1 つあれば動作しま�
 - [Agent Skills (agentskills.io)](https://agentskills.io)
 - [Agent Skills Overview (Anthropic)](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview)
 - [How to create custom Skills (Claude Help)](https://support.claude.com/en/articles/12512198-creating-custom-skills)
+- [Using Skills in Claude (Claude Help)](https://support.claude.com/en/articles/12512180-using-skills-in-claude)
 - [Build skills (OpenAI Codex)](https://developers.openai.com/codex/skills/)
 - [Goose (Block)](https://block.github.io/goose/)
 - [帝国議会会議録検索システム](https://teikokugikai-i.ndl.go.jp/)

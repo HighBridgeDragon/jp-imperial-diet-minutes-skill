@@ -1,0 +1,23 @@
+jp-imperial-diet-minutes/references/response-format.md
+  s_77da3a99e279fa::t_e08f58548d686b 28,260
+jp-imperial-diet-minutes/references/api-reference.md
+  s_77da3a99e279fa::t_e08f58548d686b 9
+jp-imperial-diet-minutes/SKILL.md
+  s_77da3a99e279fa::t_e08f58548d686b 3,16-18,30
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "bd0316dd52fc9e682b20626ab69e8d506c1e3fc5",
+  "prompts": {},
+  "sessions": {
+    "s_77da3a99e279fa": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "24256f45-b1b1-4937-b989-472f56570d69",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ryo Takahashi <38057616+HighBridgeDragon@users.noreply.github.com>"
+    }
+  }
+}

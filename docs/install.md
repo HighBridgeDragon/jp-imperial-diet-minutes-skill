@@ -19,7 +19,7 @@ npx skills add HighBridgeDragon/jp-imperial-diet-minutes-skill
 ### claude.ai / Claude Desktop
 
 1. [Releases](https://github.com/HighBridgeDragon/jp-imperial-diet-minutes-skill/releases) から `jp-imperial-diet-minutes.zip` をダウンロードします。
-2. Customize > Skills を開き、「+」→「+ Create skill」→「Upload a skill」の順に選んで `jp-imperial-diet-minutes.zip` をアップロードします。
+2. claude.ai の Skills 設定から `jp-imperial-diet-minutes.zip` をアップロードします（最新の画面操作手順は公式ヘルプ [Using Skills in Claude](https://support.claude.com/en/articles/12512180-using-skills-in-claude) を参照）。
 
 > [!IMPORTANT]
 > アップロードできるのは **Releases に添付された `jp-imperial-diet-minutes.zip`** だけです。GitHub リポジトリ画面の **Code > Download ZIP** や Releases の **Source code (zip)** で取得した zip は、展開時のルートが `jp-imperial-diet-minutes-skill-<ref>/`（直下に `jp-imperial-diet-minutes/`）になり `SKILL.md` が直下に来ないため、skill として認識されません。
@@ -30,9 +30,8 @@ Custom Skill は claude.ai・Claude API・Claude Code の間で同期しませ�
 
 zip を導入しても、以下を満たさない環境では動作しません。
 
-- **プラン**: Free / Pro / Max / Team / Enterprise のいずれかであること。
-- **コード実行**: 有効になっていること。本スキルは `curl` 等の HTTP 呼び出しをコード実行で行います。
-- **ネットワークアクセス**: サンドボックスから `teikokugikai-i.ndl.go.jp` へ到達できること。claude.ai の既定の許可ドメインはパッケージマネージャー等に限られ、`teikokugikai-i.ndl.go.jp` は含まれません（[Approved network domains](https://support.claude.com/en/articles/12111783-create-and-edit-files-with-claude)）。Team / Enterprise では、組織オーナーが Organization settings > Capabilities で許可ドメインに `teikokugikai-i.ndl.go.jp` を追加する必要があります。個人プラン（Free / Pro / Max）には許可ドメインを追加する設定が無いため、Claude Code 経由をご利用ください。
+- **コード実行**: 有効になっていること（対象プランや要件の詳細は公式ヘルプ [Using Skills in Claude](https://support.claude.com/en/articles/12512180-using-skills-in-claude) を参照）。本スキルは `curl` 等の HTTP 呼び出しをコード実行で行います。
+- **ネットワークアクセス**: サンドボックスから `teikokugikai-i.ndl.go.jp` へ到達できること。claude.ai では既定で外部ドメインへの通信が制限されているため、組織管理者による許可ドメインへの追加が必要です（許可ドメインの設定方法や対象プランの詳細は公式ヘルプ [Create and edit files with Claude の「Approved network domains」節](https://support.claude.com/en/articles/12111783-create-and-edit-files-with-claude#h_1010adf0ee) を参照）。許可ドメインを追加できない環境では、Claude Code 経由をご利用ください。
 - **Claude API 経由**: API の Skills サンドボックスはネットワークアクセスを持たないため、原理的に帝国議会会議録 API を呼び出せません。
 
 ### OpenAI Codex

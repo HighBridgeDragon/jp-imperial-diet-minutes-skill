@@ -1,0 +1,21 @@
+.gitattributes
+  s_77da3a99e279fa::t_ac5df624676af7 8-9
+docs/install.md
+  s_77da3a99e279fa::t_c3fe7414801f8f 33-35,52,56-57,61,63,65-68,70,72-76,92-93,96,102,104
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "eb03881a8846de299dbb42d3e7bfd856e14348b1",
+  "prompts": {},
+  "sessions": {
+    "s_77da3a99e279fa": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "24256f45-b1b1-4937-b989-472f56570d69",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ryo Takahashi <38057616+HighBridgeDragon@users.noreply.github.com>"
+    }
+  }
+}

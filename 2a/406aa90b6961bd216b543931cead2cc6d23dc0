@@ -1,0 +1,23 @@
+.github/release-notes.md
+  s_77da3a99e279fa::t_01d72c846abc1a 15,24-25
+docs/install.md
+  s_77da3a99e279fa::t_c556394351deca 22,33-34
+README.md
+  s_77da3a99e279fa::t_3bb8b4a70ae673 23
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "2a406aa90b6961bd216b543931cead2cc6d23dc0",
+  "prompts": {},
+  "sessions": {
+    "s_77da3a99e279fa": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "24256f45-b1b1-4937-b989-472f56570d69",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ryo Takahashi <38057616+HighBridgeDragon@users.noreply.github.com>"
+    }
+  }
+}

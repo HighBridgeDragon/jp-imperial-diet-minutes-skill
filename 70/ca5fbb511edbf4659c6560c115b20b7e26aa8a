@@ -1,0 +1,33 @@
+.github/workflows/claude-code-review.yml
+  s_f6e1d9efa72b05::t_77b0851d1f046b 5-7,10-11,16-17
+.github/workflows/claude.yml
+  s_f6e1d9efa72b05::t_5cc9e62903b0cd 10-13,17,24-25
+.github/workflows/markdown-lint.yml
+  s_f6e1d9efa72b05::t_104d34052a6065 6-7,9-10
+.github/workflows/release.yml
+  s_77da3a99e279fa::t_71b4c8042a5292 5,8,12,15-16
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "70ca5fbb511edbf4659c6560c115b20b7e26aa8a",
+  "prompts": {},
+  "sessions": {
+    "s_77da3a99e279fa": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "24256f45-b1b1-4937-b989-472f56570d69",
+        "model": "unknown"
+      },
+      "human_author": "Ryo Takahashi <38057616+HighBridgeDragon@users.noreply.github.com>"
+    },
+    "s_f6e1d9efa72b05": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a655cf33-0851-42a9-84fc-4e5aef428fd0",
+        "model": "unknown"
+      },
+      "human_author": "Ryo Takahashi <38057616+HighBridgeDragon@users.noreply.github.com>"
+    }
+  }
+}
